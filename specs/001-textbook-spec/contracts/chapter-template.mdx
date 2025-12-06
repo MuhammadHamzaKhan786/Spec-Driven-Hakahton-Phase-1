@@ -1,0 +1,340 @@
+---
+id: chapter-NN-kebab-case-title
+title: "Chapter NN: Full Chapter Title Here"
+description: "One-line summary of what this chapter teaches (20–30 words). This appears in module listings and search results."
+module: "module-NN-name"
+chapter: NN
+sidebar_position: NN
+difficulty: beginner # beginner | intermediate | advanced
+estimated_time_minutes: 15–20
+prerequisites:
+  - chapter-NN-1
+  - chapter-NN-2  # Remove if not applicable
+learning_objectives:
+  - "Objective 1: Students will understand [specific concept or skill]"
+  - "Objective 2: Students will be able to [specific action or application]"
+  - "Objective 3: Students will recognize [specific pattern or principle]"
+languages: en,ur,hi,ar,es  # Languages supported (future translations)
+source_verified: false  # Set to true after SME verification in Phase 4
+last_reviewed: YYYY-MM-DD  # Update after each review
+tags: ["robotics", "keyword1", "keyword2"]  # For RAG indexing
+---
+
+## Introduction
+
+<!--
+  MANDATORY: 100–150 words (5–10 minutes to read)
+  Goal: Hook the reader with a question, story, or real-world scenario
+  Then preview what they'll learn
+
+  Example hook: "Have you ever wondered how Boston Dynamics' Spot robot knows which leg to move first when climbing stairs? The answer lies in [Chapter Topic]."
+-->
+
+[Write introduction here: 100–150 words, engaging hook + learning preview]
+
+---
+
+## Main Content
+
+<!--
+  MANDATORY: 500–800 words (15–20 minutes to read)
+  Goal: Explain the core concept progressively from concrete → abstract → applied
+
+  Rules:
+  - Use short paragraphs (2–4 lines maximum)
+  - Explain all technical terms the first time (or mark with <GlossaryTerm> component)
+  - Use simple language (8th-grade reading level)
+  - Include 1–2 rhetorical questions to engage readers
+  - Avoid jargon without explanation
+  - Reference real robots/systems naturally where relevant
+
+  Structure suggestion:
+  1. What is [topic]? (Concrete definition with analogy)
+  2. Why does it matter? (Real-world application)
+  3. How does it work? (Technical explanation, progressive detail)
+  4. How is it used in robots? (Application to real systems)
+-->
+
+[Write main content here: 500–800 words, progressive explanation, short paragraphs]
+
+---
+
+## Diagram
+
+<!--
+  MANDATORY: At least one diagram (ASCII or Mermaid)
+  Goal: Visual representation of the core concept
+
+  Choose diagram type:
+  - ASCII: For architecture, block diagrams, motion paths (max 30 lines × 80 chars)
+  - Mermaid flowchart: For control loops, decision trees, pipelines
+  - Mermaid state machine: For gait transitions, behavior states
+  - Mermaid sequence: For sensor-actuator interactions
+
+  Include caption with Figure number and source attribution
+-->
+
+import Diagram from '@site/src/components/Diagram';
+
+<Diagram
+  caption="Figure NN.M: [Diagram title and description]. Source: [Textbook Chapter NN] or [External source if applicable]"
+  type="mermaid"  // or "ascii"
+  content={`
+graph TD
+    A["Start"] --> B["Process"]
+    B --> C["Output"]
+  `}
+/>
+
+**Caption**: Figure NN.M: [Diagram title]. This diagram shows [what it demonstrates]. [How to interpret it].
+
+---
+
+## Real-World Examples
+
+<!--
+  MANDATORY: 1–3 real-world examples from verified robots
+  Goal: Ground abstract concepts in concrete systems
+
+  Format for each example:
+  1. Robot name + system (e.g., "Boston Dynamics Spot's IMU system")
+  2. How chapter concept is demonstrated (2–3 sentences)
+  3. Source URL + year (e.g., "Source: bostondynamics.com/blog, 2024")
+
+  Use <RealWorldExample> component for each
+
+  Approved platforms:
+  - Tesla Bot (humanoid form, climbing, manipulation)
+  - Boston Dynamics Spot / Atlas (locomotion, balance, terrain, jumping)
+  - Agility Robotics Cassie (bipedal walking, running)
+  - NVIDIA Isaac (simulation, AI pipelines)
+  - Unitree Go (quadruped, industrial)
+  - ABB Industrial Robots (manufacturing, precision)
+  - WABOT, HRP, iCub (research humanoids)
+-->
+
+import RealWorldExample from '@site/src/components/RealWorldExample';
+
+<RealWorldExample
+  robotName="[Robot Name]"
+  platform="[Platform/Company]"
+  systemDescription="[What system of the robot is being used]"
+  capability="[What specific capability is demonstrated]"
+  chaptertopic="[How does this connect to this chapter's topic?]"
+  source="[URL or citation]"
+  year={2024}
+/>
+
+**Example 1: [Robot Name]**
+
+[2–4 sentences explaining how this robot's system demonstrates the chapter concept. Include how it connects to real-world use cases.]
+
+Source: [URL to official documentation or source] ([Year])
+
+**Example 2: [Robot Name]** (if applicable)
+
+[Repeat format for second example]
+
+---
+
+## Did You Know?
+
+<!--
+  MANDATORY: 1–2 surprising facts or trivia related to chapter topic
+  Goal: Engage curiosity and make learning memorable
+
+  Format: Fun fact + why it matters (2–3 sentences) + source
+-->
+
+import Callout from '@site/src/components/Callout';
+
+<Callout type="info" title="Did You Know?">
+
+[Surprising fact 1: 2–3 sentences with source]
+
+**Source**: [URL or citation], [Year]
+
+[Optional: Surprising fact 2 if applicable]
+
+</Callout>
+
+---
+
+## Try It!
+
+<!--
+  MANDATORY: 1–3 hands-on tasks or thought experiments
+  Goal: Engage active learning without requiring code/hardware
+
+  Format: Task description + expected answer/rubric (2–3 sentences)
+
+  Types of tasks:
+  - Design challenge: "Design a sensor layout for..."
+  - Trace a concept: "Trace how a control loop operates when..."
+  - Comparison: "Compare the advantages of X vs. Y for..."
+  - Predict: "Predict what would happen if..."
+-->
+
+<Callout type="tip" title="Try It!">
+
+**Task 1**: [Hands-on thought experiment or mini-task description (1–2 sentences)]
+
+**Expected answer**: [What a good answer looks like (2–3 sentences) OR rubric for grading]
+
+---
+
+**Task 2** (optional): [Repeat format for second task if applicable]
+
+</Callout>
+
+---
+
+## Summary: Key Takeaways
+
+<!--
+  MANDATORY: 3–5 key takeaways (bullet points, 1–2 sentences each)
+  Goal: Distill the most important learning points
+-->
+
+- **Takeaway 1**: [Main concept in 1–2 sentences]
+- **Takeaway 2**: [How it connects to robotics]
+- **Takeaway 3**: [Practical application or next step]
+- **Takeaway 4** (if space): [Related concept or deeper insight]
+
+---
+
+## Exercises
+
+<!--
+  MANDATORY: 3–5 questions, progressively harder
+  Goal: Test learning at recall → comprehension → analysis → synthesis levels
+
+  Include answers/rubrics for each (for instructor grading)
+
+  Format:
+  1. Recall question (fact retrieval): "What is...?"
+  2. Comprehension question (explain): "Explain how...?"
+  3. Analysis question (compare/contrast): "Why would you use X instead of Y?"
+  4. Synthesis/Application question (apply/design): "Design a system that..."
+  5. (Optional) Evaluation question (judge): "Evaluate the pros and cons of..."
+-->
+
+import Exercise from '@site/src/components/Exercise';
+
+**Exercise 1: Recall** (Easy)
+
+[Question about factual content from chapter]
+
+<Exercise
+  question="[Question text]"
+  answer="[Expected answer or rubric]"
+  difficulty="recall"
+/>
+
+---
+
+**Exercise 2: Comprehension** (Easy-Medium)
+
+[Question requiring understanding and explanation]
+
+<Exercise
+  question="[Question text]"
+  answer="[Expected answer or rubric]"
+  difficulty="comprehension"
+/>
+
+---
+
+**Exercise 3: Analysis** (Medium)
+
+[Question requiring comparison, contrast, or evaluation]
+
+<Exercise
+  question="[Question text]"
+  answer="[Expected answer or rubric]"
+  difficulty="analysis"
+/>
+
+---
+
+**Exercise 4: Synthesis** (Medium-Hard)
+
+[Question requiring application, design, or creative thinking]
+
+<Exercise
+  question="[Question text]"
+  answer="[Expected answer or rubric]"
+  difficulty="synthesis"
+/>
+
+---
+
+**Exercise 5: Evaluation** (Hard) *Optional*
+
+[Question requiring critical judgment or comparison of approaches]
+
+<Exercise
+  question="[Question text]"
+  answer="[Expected answer or rubric]"
+  difficulty="synthesis"
+/>
+
+---
+
+## Recap & Looking Ahead
+
+<!--
+  MANDATORY: 1–2 sentences connecting to next chapter or broader context
+  Goal: Bridge this chapter to future learning
+
+  Format: "In this chapter, we learned [X]. In the next chapter, we'll explore how [Y] builds on [X]..."
+-->
+
+In this chapter, we learned [key concept from this chapter]. This foundational understanding prepares us for [next chapter topic], where we'll explore [how next chapter builds on this one].
+
+---
+
+## See Also
+
+<!--
+  MANDATORY: ≥2 cross-links to other chapters
+  Goal: Build coherence and support multiple learning paths
+
+  Format: Link to prerequisite chapters (review if needed) and follow-up chapters (deeper dives)
+-->
+
+- **Prerequisite**: [Chapter X: Topic] — [Why you might want to review]
+- **Related**: [Chapter Y: Topic] — [How it connects]
+- **Leads to**: [Chapter Z: Topic] — [What builds on this chapter]
+
+---
+
+## Glossary Terms Used in This Chapter
+
+<!--
+  Optional: List key glossary terms introduced/defined in this chapter
+  These should be marked with <GlossaryTerm> component inline in chapter content
+-->
+
+- <GlossaryTerm term="Term 1" /> — First use of key technical term
+- <GlossaryTerm term="Term 2" />
+- <GlossaryTerm term="Term 3" /> (if applicable)
+
+---
+
+## Metadata for RAG Chatbot
+
+<!--
+  INTERNAL: Section IDs for retrieval-augmented generation (RAG) and future chatbot integration
+  These are not visible to readers but help the system chunk and index content
+-->
+
+{#section-introduction}
+{#section-main-content}
+{#section-diagram}
+{#section-real-world-examples}
+{#section-did-you-know}
+{#section-try-it}
+{#section-key-takeaways}
+{#section-exercises}
+{#section-recap}
