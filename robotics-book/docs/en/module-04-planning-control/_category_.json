@@ -1,0 +1,11 @@
+{
+  "label": "Module 4: Planning & Control",
+  "position": 4,
+  "collapsible": true,
+  "collapsed": false,
+  "description": "Bridge from perception to decision-making. How robots plan paths, make real-time decisions, and execute complex tasks.",
+  "link": {
+    "type": "generated-index",
+    "description": "Learn how robots make intelligent decisions and plan movements in dynamic environments."
+  }
+}

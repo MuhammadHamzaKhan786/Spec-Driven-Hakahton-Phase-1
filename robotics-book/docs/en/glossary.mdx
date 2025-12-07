@@ -1,0 +1,508 @@
+---
+id: glossary
+title: "Glossary: Robotics Terminology"
+description: "A comprehensive glossary of over 100 robotics and artificial intelligence terms used throughout this textbook."
+sidebar_position: 100
+---
+
+# Robotics & Physical AI Glossary
+
+This glossary defines key terms used throughout the Physical AI & Humanoid Robotics Textbook. Terms are listed alphabetically for easy reference.
+
+---
+
+## A
+
+**Accelerometer**
+A sensor that measures acceleration—the rate of change of velocity. In robots, accelerometers track linear acceleration in three dimensions and help detect orientation relative to gravity.
+
+**Actuator**
+Any device that converts an electrical or pneumatic signal into physical motion. Common examples: servo motors, DC motors, pneumatic cylinders.
+
+**Algorithm**
+A step-by-step computational procedure for solving a problem. In robotics: path planning algorithms (RRT, A*), control algorithms, perception algorithms.
+
+**Amplifier**
+Electronic circuit that increases signal strength (voltage or current) without adding noise. Used in motor drivers to amplify control signals to levels sufficient for motors.
+
+**Autonomous**
+Self-governing; capable of making decisions and acting without external control. An autonomous robot operates without direct human teleoperation.
+
+**Axis**
+A reference line used to describe rotation or movement. Robots have three axes: X (forward-backward), Y (left-right), Z (up-down).
+
+---
+
+## B
+
+**Baseline**
+Reference measurement used for comparison. In robotics, a baseline might be a known object size used for scale estimation in vision systems.
+
+**Behavior Tree**
+Hierarchical tree structure representing robot decision-making. Contains selectors (OR logic), sequences (AND logic), and actions.
+
+**Bias**
+Systematic error in measurement or algorithm. Also refers to inherent preferences in machine learning models that can cause unfair outcomes.
+
+**Bipedal**
+Two-legged locomotion. Humans and humanoid robots are bipedal. Offers versatility (arms free) but less stability than quadrupeds.
+
+**Boston Dynamics**
+Leading robotics research company known for advanced humanoid (Atlas) and quadruped (Spot, BigDog) robots demonstrating remarkable locomotion and manipulation.
+
+---
+
+## C
+
+**Center of Mass (COM)**
+The average position of all mass in an object. For balance, the COM must remain within the support polygon (area enclosed by support feet) to avoid falling.
+
+**Closed-Loop Control**
+Control system using feedback to adjust outputs based on measured results. The robot measures current state, compares to goal, adjusts motors. Essential for stability and accuracy.
+
+**Compliance**
+Flexibility or "give" in a mechanical system. Compliant joints absorb impacts and conform to surfaces. Rigid joints provide precision but risk breaking on impact.
+
+**Computer Vision**
+Field of artificial intelligence focused on enabling machines to understand and interpret visual information from images or video.
+
+**Control Loop**
+Feedback cycle: sense environment → measure current state → calculate error → adjust actuators → repeat. Modern robots run control loops 1000+ times per second.
+
+**Covariance**
+Statistical measure of how two variables vary together. In Kalman filters, covariance represents uncertainty in state estimates.
+
+---
+
+## D
+
+**Dead Reckoning**
+Navigation by integrating movement commands (odometry) without external references. Drifts over time without external correction.
+
+**Degrees of Freedom (DOF)**
+Number of independent ways something can move. A ball joint with 3 DOF can rotate in any direction. A humanoid arm has ~7 DOF per arm.
+
+**Depth Camera**
+Camera that captures both color (RGB) and distance information (Depth). Also called RGB-D or RGBD camera. Provides 3D data for each pixel.
+
+**Deterministic**
+System whose future state is completely determined by initial conditions. Useful for repeatable, predictable robot behavior.
+
+**Differential Drive**
+Locomotion system where left and right wheels/treads are independently controlled. Enables turning by differentially controlling speeds.
+
+**Dynamic Balance**
+Balance maintained by continuous adjustment of limb position. Allows robots to move faster but requires active control. Humans use dynamic balance while walking.
+
+---
+
+## E
+
+**Elastic Actuator**
+Actuator with intentional compliance (springs, flexible materials) between motor and load. Stores energy during impact and releases during movement, increasing efficiency.
+
+**Encoder**
+Sensor measuring rotational position or speed. Provides feedback on motor angles, essential for knowing joint positions and velocities.
+
+**End-Effector**
+Terminal part of a robot arm (gripper, hand, tool) that interacts with the environment. The "end" of the kinematic chain.
+
+**Euler Angles**
+Method of representing 3D orientation using three angles (roll, pitch, yaw) representing rotations around three axes. Intuitive for humans but has gimbal lock issue.
+
+---
+
+## F
+
+**Force Feedback**
+Information about forces applied or experienced. Force sensors in robot hands measure grip strength, allowing delicate or powerful grasping as needed.
+
+**Forward Kinematics**
+Calculating the position and orientation of the end-effector given all joint angles. "Given these arm joint angles, where is the hand?"
+
+**Friction**
+Resistance to motion between surfaces in contact. Important for grasp stability and locomotion traction. Too much friction = high power consumption.
+
+**Fusion (Sensor Fusion)**
+Combining measurements from multiple sensors using algorithms (e.g., Kalman filter) to produce more accurate, robust estimates than any single sensor.
+
+---
+
+## G
+
+**Gain**
+Multiplier in a control system (particularly proportional control). In P-control, gain determines how strongly the system responds to error.
+
+**Gait**
+Pattern of limb movement during locomotion. Common gaits: walking (statically stable), trotting (diagonals together), galloping (fast, dynamic).
+
+**Gimbal Lock**
+Mathematical singularity in Euler angle representation where one degree of freedom is lost. Quaternions avoid this issue.
+
+**GPU (Graphics Processing Unit)**
+Specialized processor optimized for parallel computation, particularly useful for vision processing and neural networks.
+
+**Gripper**
+End-effector designed to grasp and manipulate objects. Can be anthropomorphic (finger-like) or specialized (vacuum cups, magnetic).
+
+---
+
+## H
+
+**Haptic Feedback**
+Force or tactile feedback provided to a user to enhance sense of control or immersion. Used in teleoperation and gaming.
+
+**Humanoid**
+Robot with human-like form factor: head, torso, two arms, two legs. Humanoid design allows robots to use human environments (stairs, doorknobs).
+
+**Hydraulic**
+System using pressurized fluid to generate force and motion. Strong and powerful but heavier and less precise than electric actuation.
+
+---
+
+## I
+
+**IMU (Inertial Measurement Unit)**
+Sensor cluster containing accelerometers and gyroscopes to measure linear acceleration and angular velocity. Essential for balance and orientation tracking.
+
+**Impedance Control**
+Control strategy making a robot behave like a spring-mass-damper system. Allows safe interaction with environment and humans.
+
+**Inverse Kinematics (IK)**
+Computing joint angles needed to reach a desired position. Opposite of forward kinematics. Essential for manipulation and reaching tasks.
+
+**Iteration**
+Repeating a process with feedback to refine results. Roboticists iterate on designs, tuning parameters, and testing until achieving desired performance.
+
+---
+
+## J
+
+**Jacobian Matrix**
+Mathematical matrix relating joint velocities to end-effector velocities. Used in kinematics and control calculations.
+
+**Jerk**
+Rate of change of acceleration. Smooth motion has low jerk; jerky motion has high jerk. Humans perceive jerky motion as uncomfortable.
+
+---
+
+## K
+
+**Kalman Filter**
+Algorithm for fusing multiple noisy sensor measurements to estimate true state. Used extensively in robotics for state estimation from IMU, vision, encoders.
+
+**Kinematics**
+Study of motion without considering forces. Forward kinematics: joint angles → end-effector position. Inverse kinematics: desired position → joint angles.
+
+**Kinetic Energy**
+Energy of a moving object. Relevant to robot dynamics and energy management—stopping a moving robot requires dissipating kinetic energy.
+
+---
+
+## L
+
+**Latency**
+Time delay between stimulus and response. For robots: time from sensor measurement to motor response. Latency affects stability and responsiveness.
+
+**Learned Behavior**
+Behavior acquired through machine learning (neural networks, reinforcement learning) rather than explicit programming.
+
+**Limit Switch**
+Simple sensor detecting when a mechanical part reaches an extreme position (joint fully extended, gripper closed, etc.).
+
+**Lidar (Light Detection and Ranging)**
+Sensor using laser beams to measure distances and create 3D point clouds. Works in darkness, provides accurate range measurements.
+
+**Linear Actuator**
+Actuator producing straight-line motion rather than rotational. Example: telescopic rod that extends/retracts.
+
+---
+
+## M
+
+**Machine Learning**
+Field of AI where systems improve through experience (data) rather than explicit programming. Includes supervised learning, unsupervised learning, reinforcement learning.
+
+**Mechanism**
+Mechanical structure converting input motion/force into desired output motion/force. Example: gear mechanism converts motor rotation to amplified torque.
+
+**Megatrend**
+Large-scale, long-term societal change. The rise of robotics is a megatrend expected to reshape labor, manufacturing, and daily life.
+
+**MIT (Massachusetts Institute of Technology)**
+Leading research institution with prominent robotics and AI programs. Home to influential humanoid robot research.
+
+**Model Predictive Control (MPC)**
+Control approach that predicts future system behavior and optimizes control inputs accordingly. More sophisticated than simple feedback control.
+
+**Modular**
+Designed as independent modules that can be combined. Modular robot design enables reuse, rapid assembly, and easier maintenance.
+
+---
+
+## N
+
+**Neural Network**
+Computational model inspired by biological neurons. Connected nodes (neurons) learn patterns from data. Used for vision, control, decision-making.
+
+**Neuromorphic**
+Designed to mimic biological nervous systems. Neuromorphic sensors (e.g., event cameras) respond to changes like biological eyes.
+
+**NVIDIA Isaac**
+NVIDIA's robotics simulation and computing platform. Provides tools for designing, simulating, and deploying robot software.
+
+---
+
+## O
+
+**Odometry**
+Estimating position and orientation by tracking motion (velocity, acceleration). Dead reckoning. Accumulates error over time without external correction.
+
+**Open-Loop Control**
+Control without feedback. Robot executes command without checking if it succeeded. Fast but fragile to disturbances.
+
+**Optimality**
+Quality of being optimal—best possible solution to a problem. Path planning algorithms trade between optimality (shortest path) and speed (time to compute).
+
+**Optimization**
+Process of finding the best solution within constraints. Robot controllers optimize for speed, energy, smoothness simultaneously.
+
+---
+
+## P
+
+**Parallel Processing**
+Executing multiple computations simultaneously using multiple processors. GPUs excel at parallel processing for vision tasks.
+
+**Path Planning**
+Computing collision-free routes from start to goal position. Algorithms: RRT, A*, Dijkstra's algorithm.
+
+**Payload**
+Maximum weight a robot can carry or manipulate while maintaining performance. Limited by motor torque and structural strength.
+
+**PID Control**
+Proportional-Integral-Derivative control. Three-term controller improving upon simple proportional control. Widely used in robotics.
+
+**Pneumatic**
+System using compressed air to generate motion. Lighter and safer than hydraulics but less powerful and precise.
+
+**Point Cloud**
+3D data representation as collection of XYZ coordinates. Produced by lidar, depth cameras. Can be processed to extract terrain, obstacles, objects.
+
+**Pose**
+Position and orientation of an object or robot in space. 6 DOF: X, Y, Z position + roll, pitch, yaw orientation.
+
+**Potential Energy**
+Energy stored due to position (e.g., height). A robot at the top of a hill has gravitational potential energy.
+
+**Proprioception**
+Sense of body position and movement. Robots achieve proprioception through joint encoders and inertial sensors.
+
+---
+
+## Q
+
+**Quadruped**
+Four-legged locomotion. More stable than bipeds but less versatile (legs usually occupied for locomotion). Boston Dynamics' Spot is quadruped.
+
+**Quaternion**
+Method of representing 3D orientation using four numbers (x, y, z, w). Avoids gimbal lock and is computationally efficient for rotation calculations.
+
+---
+
+## R
+
+**Reactive Control**
+Control responding immediately to sensed conditions. Fast (1-10ms) but limited to pre-programmed responses. Complements deliberative planning.
+
+**Real-Time System**
+System meeting strict timing constraints. Missing a deadline causes problem. Robot balance control is hard real-time (missing deadline = fall).
+
+**Reinforcement Learning**
+Machine learning where system learns through trial-and-error feedback. Rewarded for success, penalized for failure. Used to learn robot policies.
+
+**Resolution**
+Precision or granularity of measurement or control. Higher resolution = finer control but slower update rate.
+
+**Rigid Body**
+Object that doesn't deform. Simplifying assumption in robotics (real robots deform slightly under load).
+
+**RRT (Rapidly-Exploring Random Tree)**
+Path planning algorithm using randomized sampling to efficiently explore configuration space. Works well for high-dimensional planning.
+
+**Robustness**
+Ability to function correctly despite uncertainty, noise, or unexpected conditions. Robust robots handle variations in environment and parts.
+
+---
+
+## S
+
+**Safety Margin**
+Buffer zone beyond minimum requirements. For balance: distance from COM to edge of support polygon. Larger margin = safer against disturbances.
+
+**Sensor**
+Device measuring physical quantities (position, force, light, etc.) and converting to electrical signals readable by computer.
+
+**Servo Motor**
+Motor with built-in feedback and control, maintaining commanded position. Provides position control unlike simple DC motors.
+
+**SLAM (Simultaneous Localization and Mapping)**
+Algorithm building environmental maps while tracking robot's own position. Enables exploration of unknown spaces.
+
+**Soft Robot**
+Robot using compliant materials (rubber, fabric) rather than rigid structure. Safer for human interaction but harder to control precisely.
+
+**Stability Margin**
+Distance from current center of mass to edge of support polygon. Larger margin = more stable against falls.
+
+**State**
+Complete information describing system condition at a moment. For a robot: position, orientation, velocity, joint angles, etc.
+
+**State Estimation**
+Inferring robot's true state from noisy sensor measurements. Kalman filters perform optimal state estimation.
+
+**State Machine**
+System with discrete states and transitions between them. Useful for sequential task representation.
+
+**Static Balance**
+Balance maintained without motion, center of mass within support polygon. Slower and less energy-efficient than dynamic balance.
+
+---
+
+## T
+
+**Teleoperation**
+Remote operation of a robot by human operator. Operator sees robot's cameras and controls movements through joystick/interface.
+
+**Tesla Bot**
+Humanoid robot under development by Tesla for manufacturing tasks. Designed with human proportions for human-compatible workspaces.
+
+**Thermal Management**
+Controlling heat generated by motors and electronics. Overheating damages components, degrades performance, limits operation time.
+
+**Torque**
+Rotational force measured in Newton-meters. Determines how much weight a motor can lift or turn. Higher torque = stronger but often slower motor.
+
+**Trajectory**
+Path through space as function of time. Includes both position and velocity at each moment.
+
+**Traversability**
+Assessment of whether terrain is passable for a robot. Considers slope, friction, obstacles, bearing capacity.
+
+---
+
+## U
+
+**Unitree**
+Chinese robotics company producing affordable legged robots (Go1, H1) competing with Boston Dynamics in speed and capability.
+
+**Uncertainty**
+Lack of perfect knowledge. All sensors are noisy; all models are approximations. Robotics explicitly handles uncertainty.
+
+---
+
+## V
+
+**Velocity**
+Speed and direction of motion. Vector quantity (has both magnitude and direction).
+
+**Verified**
+Confirmed through testing or authoritative sources. Technical claims in textbook are verified from manufacturer datasheets, peer-reviewed papers.
+
+**Vision System**
+Camera-based perception system for object detection, pose estimation, scene understanding. Can use traditional computer vision or deep learning.
+
+---
+
+## W
+
+**WABOT**
+Early humanoid robot built in 1970s at Waseda University, Japan. Pioneering platform that could walk, talk, and manipulate objects.
+
+**Wheeled Robot**
+Robot using wheels for locomotion. Fast and energy-efficient on flat terrain but limited on obstacles. Can't climb stairs.
+
+---
+
+## X
+
+**XYZ Coordinates**
+3D Cartesian coordinate system. X (forward-backward), Y (left-right), Z (up-down). Origin at chosen reference point.
+
+---
+
+## Y
+
+**Yaw**
+Rotation around vertical axis (Z-axis). Turning left/right. One of three Euler angles (roll, pitch, yaw).
+
+---
+
+## Z
+
+**Zero-G Environment**
+Weightlessness condition (no gravity). Relevant for space robots. Eliminates gravity challenges but introduces unique locomotion issues.
+
+---
+
+## Acronyms & Abbreviations
+
+| Acronym | Meaning |
+|---------|---------|
+| AI | Artificial Intelligence |
+| DOF | Degrees of Freedom |
+| GPS | Global Positioning System |
+| GPU | Graphics Processing Unit |
+| IK | Inverse Kinematics |
+| IMU | Inertial Measurement Unit |
+| ML | Machine Learning |
+| NLP | Natural Language Processing |
+| PID | Proportional-Integral-Derivative |
+| RGB | Red-Green-Blue |
+| RGB-D | Red-Green-Blue-Depth |
+| ROS | Robot Operating System |
+| RRT | Rapidly-Exploring Random Tree |
+| SLAM | Simultaneous Localization and Mapping |
+| TCP | Tool Center Point |
+| USB | Universal Serial Bus |
+| UV | Ultraviolet |
+| VR | Virtual Reality |
+| XML | eXtensible Markup Language |
+| FOV | Field of View |
+| COM | Center of Mass |
+| DOF | Degrees of Freedom |
+| E2E | End-to-End |
+| ECU | Electronic Control Unit |
+| EKF | Extended Kalman Filter |
+| fps | Frames Per Second |
+| Hz | Hertz (cycles per second) |
+| IRL | In the Real World |
+| Lidar | Light Detection and Ranging |
+| MPC | Model Predictive Control |
+| NLP | Natural Language Processing |
+| PWM | Pulse Width Modulation |
+| SoC | System on Chip |
+| V2X | Vehicle-to-Everything |
+
+---
+
+## Symbol Reference
+
+| Symbol | Meaning |
+|--------|---------|
+| θ | Theta - angle or joint angle |
+| ω | Omega - angular velocity |
+| τ | Tau - torque |
+| ∑ | Sigma - summation |
+| ∫ | Integral - accumulation over time |
+| ∂ | Partial derivative |
+| ∇ | Gradient (directional derivative) |
+| × | Cross product |
+| · | Dot product |
+| ‖·‖ | Norm (magnitude) |
+
+---
+
+**End of Glossary**
+
+This glossary provides definitions for terms used throughout the textbook. For more detailed explanations, refer to the specific chapters where each term is introduced.

@@ -1,0 +1,11 @@
+{
+  "label": "Module 3: Locomotion & Motion",
+  "position": 3,
+  "collapsible": true,
+  "collapsed": false,
+  "description": "Master how robots move. From walking gaits to climbing obstacles, understand the physics and control strategies behind locomotion.",
+  "link": {
+    "type": "generated-index",
+    "description": "Learn how robots walk, climb, and move through complex environments with balance and grace."
+  }
+}

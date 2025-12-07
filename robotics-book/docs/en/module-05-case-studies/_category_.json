@@ -1,0 +1,11 @@
+{
+  "label": "Module 5: Integration & Advanced Topics",
+  "position": 5,
+  "collapsible": true,
+  "collapsed": false,
+  "description": "See it all together. Case studies of complete systems, emerging research, and future directions in humanoid robotics.",
+  "link": {
+    "type": "generated-index",
+    "description": "Explore complete robot systems and the future of Physical AI and humanoid robotics."
+  }
+}

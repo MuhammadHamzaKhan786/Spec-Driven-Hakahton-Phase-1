@@ -1,0 +1,11 @@
+{
+  "label": "Module 1: Physical AI Fundamentals",
+  "position": 1,
+  "collapsible": true,
+  "collapsed": false,
+  "description": "Build a foundation in Physical AI concepts, understanding how robots perceive, decide, and act in the physical world. No prior robotics knowledge required.",
+  "link": {
+    "type": "generated-index",
+    "description": "Learn the fundamental concepts that underpin all Physical AI and humanoid robotics systems."
+  }
+}

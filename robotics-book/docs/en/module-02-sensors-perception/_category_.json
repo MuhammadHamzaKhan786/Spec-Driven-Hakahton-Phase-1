@@ -1,0 +1,11 @@
+{
+  "label": "Module 2: Sensors & Perception",
+  "position": 2,
+  "collapsible": true,
+  "collapsed": false,
+  "description": "Deep dive into how robots sense their environment and build internal representations. Bridge from sensors to making decisions.",
+  "link": {
+    "type": "generated-index",
+    "description": "Learn how robots perceive and understand the world through sensors and data fusion."
+  }
+}
