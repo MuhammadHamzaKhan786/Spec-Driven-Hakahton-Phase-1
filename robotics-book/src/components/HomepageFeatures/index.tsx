@@ -5,52 +5,64 @@ import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  icon: string;
   description: ReactNode;
+  borderColor: string; // For different colored borders
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Textbook Features',
+    icon: '📚',
+    borderColor: 'cyan',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Interactive chapters with code snippets, visual diagrams, mathematical formulas, step-by-step tutorials, practice problems, and downloadable resources for hands-on learning
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'What You Will Learn',
+    icon: '🧠',
+    borderColor: 'purple',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Robotics fundamentals, kinematics & dynamics, sensor technologies, control systems (PID, MPC), machine learning for robotics, computer vision, path planning, humanoid mechanics, and real-world AI applications
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Main Goals',
+    icon: '🎯',
+    borderColor: 'pink',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Build practical robotics programming skills, understand Physical AI principles, design intelligent autonomous systems, implement sensor fusion algorithms, and prepare for advanced robotics research and industry careers
       </>
     ),
   },
+    {
+    title: 'Interactive Learning Tools',
+    icon: '🛠️',
+    borderColor: 'cyan',
+    description: (
+      <>
+        Access simulation environments, virtual robot labs, code playgrounds with real-time execution, 3D visualization tools, interactive quizzes, and debugging assistants to practice concepts hands-on without physical hardware
+      </>
+    ),
+  },
+  
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, icon, description, borderColor}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+      <div className={clsx('card', styles.featureCard, styles[`border-${borderColor}`])}>
+        <div className={styles.cardContent}>
+          <div className={styles.icon}>{icon}</div>
+          <Heading as="h3" className={styles.cardTitle}>{title}</Heading>
+          <p className={styles.cardDescription}>{description}</p>
+        </div>
       </div>
     </div>
   );
@@ -60,7 +72,7 @@ export default function HomepageFeatures(): ReactNode {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row">
+        <div className="row" style={{gap: '2rem', alignItems: 'stretch'}}>
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}

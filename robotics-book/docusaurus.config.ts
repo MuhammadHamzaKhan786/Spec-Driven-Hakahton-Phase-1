@@ -35,6 +35,9 @@ const config: Config = {
     locales: ['en'],
   },
 
+  plugins: [
+    './plugins/rag-api.js', // RAG API plugin
+  ],
   presets: [
     [
       'classic',
@@ -85,7 +88,22 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Chapters',
+          label: 'Modules',
+        },
+        {
+          to: '/features',
+          label: 'Features',
+          position: 'left',
+        },
+        {
+          to: '/learn',
+          label: 'Learn',
+          position: 'left',
+        },
+        {
+          to: '/about',
+          label: 'About',
+          position: 'left',
         },
         {
           href: 'https://github.com/hakahton/robotics-textbook',
@@ -98,11 +116,23 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Modules',
+          title: 'Documentation',
           items: [
             {
-              label: 'Chapter 1: What is Physical AI?',
+              label: 'Modules',
               to: '/docs/en/module-01-foundations/chapter-01-what-is-physical-ai',
+            },
+            {
+              label: 'Features',
+              to: '/features',
+            },
+            {
+              label: 'Learn',
+              to: '/learn',
+            },
+            {
+              label: 'About',
+              to: '/about',
             },
           ],
         },
@@ -119,8 +149,25 @@ const config: Config = {
             },
           ],
         },
+        {
+          title: 'Connect',
+          items: [
+            {
+              label: 'GitHub',
+              href: 'https://github.com/hakahton/robotics-textbook',
+            },
+            {
+              label: 'Linkdin',
+              href: 'https://github.com/hakahton/robotics-textbook',
+            },
+            {
+              label: 'Twitter',
+              href: 'https://github.com/hakahton/robotics-textbook',
+            },
+          ],
+        },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Physical AI Textbook. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Physical AI Textbook. All rights reserved.`,
     },
     prism: {
       theme: prismThemes.github,

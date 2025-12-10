@@ -1,11 +1,113 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 4rem 0;
+  width: 100%;
+  background: var(--bg-dark-primary);
+}
+
+.featureCard {
+  background: var(--bg-dark-card);
+  backdrop-filter: blur(10px);
+  border: 1px solid;
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 255, 242, 0.2);
+}
+
+.border-cyan {
+  border-image: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple)) 1;
+}
+
+.border-purple {
+  border-image: linear-gradient(90deg, var(--accent-purple), var(--accent-pink)) 1;
+}
+
+.border-pink {
+  border-image: linear-gradient(90deg, var(--accent-pink), var(--accent-cyan)) 1;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   width: 100%;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+.icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  animation: pulse 2s infinite;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.cardDescription {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 996px) {
+  .features {
+    padding: 2rem 0;
+  }
+
+  .featureCard {
+    padding: 1.5rem;
+  }
+
+  .icon {
+    font-size: 2.5rem;
+  }
+
+  .cardTitle {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .featureCard {
+    margin-bottom: 1.5rem;
+  }
+
+  .cardTitle {
+    font-size: 1.2rem;
+  }
+
+  .cardDescription {
+    font-size: 0.9rem;
+  }
 }
